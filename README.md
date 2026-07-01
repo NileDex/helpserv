@@ -110,6 +110,33 @@ Send a student message and receive an NLP-generated response.
 
 ---
 
+## Evaluation
+
+A test suite of **87 questions** across all 14 intents is included. It measures
+intent-classification accuracy and average response time.
+
+```bash
+# 1. Start the Flask server first
+py -3.12 app.py
+
+# 2. In a second terminal, run the evaluator
+py -3.12 evaluate.py
+```
+
+To evaluate the deployed Railway server instead:
+
+```bash
+py -3.12 evaluate.py --url https://web-production-608a0.up.railway.app
+```
+
+**Output includes:**
+- Pass / fail for every test case with predicted intent and confidence
+- Per-intent accuracy table with average response time
+- Overall accuracy percentage and efficiency rating
+- Full results saved to `evaluation_report.json`
+
+---
+
 ## Running the Scraper
 
 The scraper fetches content from the RSU website and saves it to

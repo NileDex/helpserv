@@ -16,7 +16,7 @@ INTENTS = [
     },
     {
         'name': 'thanks',
-        'patterns': [],
+        'patterns': [re.compile(r'\b(very|really|so|quite)\s+helpful\b', re.I)],
         'keywords': {'thank': 3, 'thanks': 3, 'thank you': 3, 'appreciate': 2, 'helpful': 2},
     },
     {
@@ -46,6 +46,7 @@ INTENTS = [
             'programme': 4, 'program': 4, 'department': 3, 'faculty': 3,
             'faculties': 4, 'curriculum': 4, 'add course': 5, 'drop course': 5,
             'course registration': 5, 'what courses': 4, 'available courses': 4,
+            'jamb subjects': 5, 'jamb subject': 5,
         },
     },
     {
@@ -98,7 +99,7 @@ INTENTS = [
     },
     {
         'name': 'calendar',
-        'patterns': [],
+        'patterns': [re.compile(r'harmattan.{0,20}(exam|timetable)', re.I)],
         'keywords': {
             'calendar': 4, 'academic calendar': 5, 'semester': 4,
             'holiday': 4, 'vacation': 4, 'resumption': 5,
@@ -109,7 +110,7 @@ INTENTS = [
         'name': 'contact',
         'patterns': [],
         'keywords': {
-            'contact': 4, 'phone': 4, 'email': 4, 'address': 3,
+            'contact': 6, 'phone': 4, 'email': 4, 'address': 3,
             'staff': 3, 'office': 3, 'number': 3, 'reach': 3,
             'registrar': 5, 'hod': 4, 'dean': 4,
             'vice chancellor': 4, 'student affairs': 5, 'ict': 3,

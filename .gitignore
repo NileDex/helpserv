@@ -27,3 +27,6 @@ dist/
 
 # Logs
 *.log
+
+# Evaluation output
+evaluation_report.json
